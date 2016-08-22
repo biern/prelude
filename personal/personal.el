@@ -2,7 +2,6 @@
 
 (prelude-require-packages
  '(
-   flycheck-mypy
    yasnippet
    )
  )
