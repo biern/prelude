@@ -11,3 +11,9 @@
 (require 'flycheck-mypy)
 
 (flycheck-add-next-checker 'python-flake8' (warning . python-mypy))
+
+(with-eval-after-load 'org
+  (setq org-startup-indented t) ; Enable `org-indent-mode' by default
+  (add-hook 'org-mode-hook #'visual-line-mode)
+  )
+(setq whitespace-global-modes '(not org-mode))
