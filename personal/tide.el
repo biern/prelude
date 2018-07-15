@@ -18,6 +18,7 @@
   (local-set-key (concat (kbd "C-c SPC") "f") 'tide-fix)
   (local-set-key (concat (kbd "C-c SPC") "u") 'tide-references)
   (local-set-key (concat (kbd "C-c SPC") "i") 'tide-format)
+  (local-set-key (concat (kbd "C-c SPC") "m") 'tide-rename-file)
   )
 
 
