@@ -17,3 +17,5 @@
   (add-hook 'org-mode-hook #'visual-line-mode)
   )
 (setq whitespace-global-modes '(not org-mode))
+
+(setq helm-mode-fuzzy-match t)
