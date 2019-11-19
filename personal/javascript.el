@@ -26,6 +26,11 @@
      (add-hook 'typescript-mode-hook #'add-node-modules-path)
      (add-hook 'typescript-mode-hook #'prettier-js-mode)))
 
+(eval-after-load 'web-mode
+  '(progn
+     (add-hook 'web-mode-hook #'add-node-modules-path)
+     (add-hook 'web-mode-hook #'prettier-js-mode)))
+
 (eval-after-load 'js2-mode
   '(progn
      (add-hook 'js2-mode-hook #'add-node-modules-path)
