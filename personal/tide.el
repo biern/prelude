@@ -3,7 +3,8 @@
   (tide-setup)
   (flycheck-mode +1)
   (setq flycheck-check-syntax-automatically '(save mode-enabled))
-  (flycheck-add-next-checker 'typescript-tide '(t . typescript-tslint) 'append)
+  ;; (flycheck-add-next-checker 'typescript-tide '(t . typescript-tslint) 'append)
+  (flycheck-add-next-checker 'typescript-tide '(t . javascript-eslint) 'append)
   (eldoc-mode +1)
   (tide-hl-identifier-mode +1)
   (personal-setup-tide-keys)
@@ -19,6 +20,8 @@
   (local-set-key (concat (kbd "C-c SPC") "u") 'tide-references)
   (local-set-key (concat (kbd "C-c SPC") "i") 'tide-format)
   (local-set-key (concat (kbd "C-c SPC") "m") 'tide-rename-file)
+  (local-set-key (concat (kbd "C-c SPC") "r") 'tide-refactor)
+  (local-set-key (concat (kbd "C-c SPC") "f") 'tide-fix)
   )
 
 
@@ -40,5 +43,8 @@
               (setq web-mode-markup-indent-offset 2)
               (setup-tide-mode))))
 
-;; enable typescript-tslint checker
-(flycheck-add-mode 'typescript-tslint 'web-mode)
+;; ;; enable typescript-tslint checker
+;; (flycheck-add-mode 'typescript-tslint 'web-mode)
+
+(with-eval-after-load 'flycheck
+  (flycheck-add-mode 'javascript-eslint 'typescript-mode))

@@ -17,3 +17,21 @@
 (setq-default flycheck-disabled-checkers
               (append flycheck-disabled-checkers
                       '(json-jsonlist)))
+
+
+(require 'prettier-js)
+
+(eval-after-load 'typescript-mode
+  '(progn
+     (add-hook 'typescript-mode-hook #'add-node-modules-path)
+     (add-hook 'typescript-mode-hook #'prettier-js-mode)))
+
+(eval-after-load 'web-mode
+  '(progn
+     (add-hook 'web-mode-hook #'add-node-modules-path)
+     (add-hook 'web-mode-hook #'prettier-js-mode)))
+
+(eval-after-load 'js2-mode
+  '(progn
+     (add-hook 'js2-mode-hook #'add-node-modules-path)
+     (add-hook 'js2-mode-hook #'prettier-js-mode)))
