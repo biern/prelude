@@ -1,3 +1,13 @@
+(prelude-require-packages
+ '(
+   tide
+   typescript-mode
+   web-mode
+   prettier-js
+   add-node-modules-path
+   )
+ )
+
 ;; To install eslint:
 ;; npm install -g eslint babel-eslint eslint-plugin-react
 ;; eslint -v # view version and confirm that its in your path

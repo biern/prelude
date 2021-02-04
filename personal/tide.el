@@ -1,3 +1,11 @@
+(prelude-require-packages
+ '(
+   tide
+   typescript-mode
+   web-mode
+   )
+ )
+
 (defun setup-tide-mode ()
   (interactive)
   (tide-setup)
