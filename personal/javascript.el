@@ -45,3 +45,6 @@
   '(progn
      (add-hook 'js2-mode-hook #'add-node-modules-path)
      (add-hook 'js2-mode-hook #'prettier-js-mode)))
+
+(add-hook 'js2-mode-hook (lambda () (setq js-indent-level 2)))
+(add-hook 'typescript-mode-hook (lambda () (setq typescript-indent-level 2)))
