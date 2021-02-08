@@ -8,6 +8,8 @@
 
 (yas-global-mode +1)
 
+(setq projectile-use-git-grep t)
+
 (require 'flycheck-mypy)
 
 (flycheck-add-next-checker 'python-flake8' (warning . python-mypy))
