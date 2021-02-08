@@ -5,5 +5,5 @@
 
 (setq mac-command-modifier 'control)
 (setq mac-control-modifier 'command)
-(setq mac-option-modifier 'none)
-(setq mac-right-option-modifier 'meta) ;; somehow this rebinds the left option modifier
+(setq mac-option-modifier 'meta)
+(setq mac-right-option-modifier 'none)
