@@ -2,6 +2,7 @@
 
 (prelude-require-packages
  '(
+   use-package
    yasnippet
    )
  )

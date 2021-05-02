@@ -1,4 +1,7 @@
-(add-hook 'rust-mode-hook #'racer-mode)
+(prelude-require-packages
+ '(
+   rustic
+   )
+ )
 
-(with-eval-after-load 'rust-mode
-  (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
+(use-package rustic)
